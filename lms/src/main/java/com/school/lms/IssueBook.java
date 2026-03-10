@@ -180,7 +180,7 @@ public class IssueBook extends JFrame {
             PreparedStatement upd = c.prepareStatement("UPDATE books SET available_copies = available_copies - 1 WHERE id=?");
             upd.setInt(1, bookId); upd.executeUpdate();
 
-            JOptionPane.showMessageDialog(this,"✅ Book Issued Successfully!");
+            JOptionPane.showMessageDialog(this," Book Issued Successfully!");
             loadAvailableBooks(null);
             borrowerField.setText("");
         } catch (Exception ex) { showErr(ex); }
